@@ -1,1 +1,2 @@
-https://www.udemy.com/course/design-patterns-go/
+*study video*
+- https://www.udemy.com/course/design-patterns-go/
