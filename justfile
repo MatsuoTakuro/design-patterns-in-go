@@ -1,2 +1,2 @@
 run:
-  go run main.go
+  go build && ./design-patterns-in-go
