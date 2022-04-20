@@ -3,18 +3,16 @@ package singleton
 import (
 	"bufio"
 	"os"
-	"path/filepath"
+	"path"
+	"runtime"
 	"strconv"
 )
 
-func readData(path string) (map[string]int, error) {
-	ex, err := os.Executable()
-	if err != nil {
-		panic(err)
-	}
-	exPath := filepath.Dir(ex)
+func readData(filename string) (map[string]int, error) {
+	relPath := getRelativePath()
+	filePath := path.Join(relPath, filename)
 
-	file, err := os.Open(exPath + path)
+	file, err := os.Open(filePath)
 	if err != nil {
 		return nil, err
 	}
@@ -33,4 +31,12 @@ func readData(path string) (map[string]int, error) {
 	}
 
 	return result, nil
+}
+
+func getRelativePath() string {
+
+	// Relative on runtime DIR:
+	_, b, _, _ := runtime.Caller(0)
+	relPath := path.Join(path.Dir(b))
+	return relPath
 }

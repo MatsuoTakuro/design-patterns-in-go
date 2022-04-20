@@ -17,7 +17,7 @@ var instance *singletonDatabase
 
 func GetSingletonDatabase() *singletonDatabase {
 	once.Do(func() {
-		caps, e := readData("/singleton/capitals.txt")
+		caps, e := readData("capitals.txt")
 		db := singletonDatabase{caps}
 		if e == nil {
 			db.capitals = caps
@@ -25,4 +25,12 @@ func GetSingletonDatabase() *singletonDatabase {
 		instance = &db
 	})
 	return instance
+}
+
+func GetTotalPopulation(cities []string) int {
+	result := 0
+	for _, city := range cities {
+		result += GetSingletonDatabase().GetPopulation(city)
+	}
+	return result
 }
