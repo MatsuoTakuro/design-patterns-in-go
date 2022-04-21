@@ -16,3 +16,13 @@ func PlayGame(g Game) {
 	}
 	fmt.Printf("Player %d wins.\n", g.WinningPlayer())
 }
+
+func PlayGame2(start, takeTurn func(),
+	haveWinner func() bool,
+	winningPlayer func() int) {
+	start()
+	for !haveWinner() {
+		takeTurn()
+	}
+	fmt.Printf("Player %d wins.\n", winningPlayer())
+}
