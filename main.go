@@ -4,8 +4,9 @@ import (
 	// facade "github.com/MatsuoTakuro/design-patterns-in-go/facade"
 	// iterator "github.com/MatsuoTakuro/design-patterns-in-go/iterator"
 	// singleResp "github.com/MatsuoTakuro/design-patterns-in-go/solid_design_principles/single_responsibility"
-	singleton "github.com/MatsuoTakuro/design-patterns-in-go/singleton"
+	// singleton "github.com/MatsuoTakuro/design-patterns-in-go/singleton"
 	// strategy "github.com/MatsuoTakuro/design-patterns-in-go/strategy"
+	templateMethod "github.com/MatsuoTakuro/design-patterns-in-go/template_method"
 )
 
 func main() {
@@ -14,5 +15,6 @@ func main() {
 	// iterator.Sub2()
 	// facade.Sub()
 	// strategy.Sub()
-	singleton.Sub()
+	// singleton.Sub()
+	templateMethod.Sub()
 }
