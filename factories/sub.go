@@ -6,6 +6,7 @@ func Sub() {
 	factoryFunctionAndInterfaceFactory()
 	factoryGeneratorWithFunction()
 	factoryGeneratorWithStruct()
+	prototypeFactory()
 }
 
 func factoryFunctionAndInterfaceFactory() {
@@ -17,8 +18,8 @@ func factoryFunctionAndInterfaceFactory() {
 }
 
 func factoryGeneratorWithFunction() {
-	developerFactory := NewEmployeeFactory("developer", 60000)
-	managerFactory := NewEmployeeFactory("manager", 80000)
+	developerFactory := NewEmployeeFactory("Developer", 60000)
+	managerFactory := NewEmployeeFactory("Manager", 80000)
 
 	developer := developerFactory("Adam")
 	manager := managerFactory("Jane")
@@ -32,4 +33,10 @@ func factoryGeneratorWithStruct() {
 	bossFactory.AnnualIncome = 11000
 	boss := bossFactory.Create("Sam")
 	fmt.Println(*boss)
+}
+
+func prototypeFactory() {
+	m := NewEmployee(Manager)
+	m.Name = "Sam"
+	fmt.Println(*m)
 }
