@@ -1,14 +1,23 @@
 package factories
 
-type Person struct {
-	Name     string
-	Age      int
-	EyeCount int
+import "fmt"
+
+type Person interface {
+	SayHello()
 }
 
-func NewPerson(name string, age int) *Person {
-	if age < 16 {
-		// ...
+type person struct {
+	name string
+	age  int
+}
+
+func (p *person) SayHello() {
+	fmt.Printf("Hi, my name is %s, I am %d years old.\n", p.name, p.age)
+}
+
+func NewPerson(name string, age int) Person {
+	if age > 100 {
+		return &tiredPerson{name, age}
 	}
-	return &Person{name, age, 2}
+	return &person{name, age}
 }
