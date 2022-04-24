@@ -1,8 +1,9 @@
 package main
 
 import (
+	adapter "github.com/MatsuoTakuro/design-patterns-in-go/adapter"
 	// facade "github.com/MatsuoTakuro/design-patterns-in-go/facade"
-	factories "github.com/MatsuoTakuro/design-patterns-in-go/factories"
+	// factories "github.com/MatsuoTakuro/design-patterns-in-go/factories"
 	// iterator "github.com/MatsuoTakuro/design-patterns-in-go/iterator"
 	// singleResp "github.com/MatsuoTakuro/design-patterns-in-go/solid_design_principles/single_responsibility"
 	// singleton "github.com/MatsuoTakuro/design-patterns-in-go/singleton"
@@ -18,5 +19,6 @@ func main() {
 	// strategy.Sub()
 	// singleton.Sub()
 	// templateMethod.Sub()
-	factories.Sub()
+	// factories.Sub()
+	adapter.Sub()
 }
