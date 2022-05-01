@@ -1,16 +1,14 @@
 package prototype
 
+import (
+	"bytes"
+	"encoding/gob"
+	"fmt"
+)
+
 type Address struct {
 	StreetAddress, City, Country string
 }
-
-func (a *Address) DeepCopy() *Address {
-	return &Address{
-		a.StreetAddress,
-		a.City,
-		a.Country}
-}
-
 type Person struct {
 	Name    string
 	Address *Address
@@ -18,8 +16,16 @@ type Person struct {
 }
 
 func (p *Person) DeepCopy() *Person {
-	copied := *p
-	copied.Address = p.Address.DeepCopy()
-	copy(copied.Friends, p.Friends)
-	return &copied
+	// note: no error handling below
+	b := bytes.Buffer{}
+	e := gob.NewEncoder(&b)
+	_ = e.Encode(p)
+
+	// peek into structure
+	fmt.Println(b.String())
+
+	d := gob.NewDecoder(&b)
+	result := Person{}
+	_ = d.Decode(&result)
+	return &result
 }
