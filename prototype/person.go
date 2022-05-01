@@ -6,12 +6,12 @@ import (
 	"fmt"
 )
 
-type Address struct {
+type PersonAddress struct {
 	StreetAddress, City, Country string
 }
 type Person struct {
 	Name    string
-	Address *Address
+	Address *PersonAddress
 	Friends []string
 }
 
