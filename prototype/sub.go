@@ -4,17 +4,16 @@ import "fmt"
 
 func Sub() {
 
-	john := Person{"John", &Address{"123 London Rd", "London", "UK"}}
-	jane := john
+	john := &Person{
+		"John",
+		&Address{"123 London Rd", "London", "UK"},
+		[]string{"Chris", "Matt"}}
+	jane := john.DeepCopy()
 	jane.Name = "Jane"
-	jane.Address = &Address{
-		john.Address.StreetAddress,
-		john.Address.City,
-		john.Address.Country}
-	// jane.Address.StreetAddress = "321 Baker St"
 	jane.Address.StreetAddress = "321 Baker St"
+	jane.Friends = append(jane.Friends, "Angela")
 
-	fmt.Println(john, john.Address)
-	fmt.Println(jane, jane.Address)
+	fmt.Println(*john, *john.Address)
+	fmt.Println(*jane, *jane.Address)
 
 }
