@@ -9,7 +9,8 @@ func Sub() {
 	// helloWorld()
 	// helloWorldByBuilder()
 	// helloWorldByBuilderWithFluent()
-	person()
+	// person()
+	sendEmail()
 }
 
 func helloWorld() {
@@ -60,4 +61,13 @@ func person() {
 		Earning(123000)
 	person := pb.Build()
 	fmt.Println(*person)
+}
+
+func sendEmail() {
+	SendEmail(func(b *EmailBuilder) {
+		b.From("foo@bar.com").
+			To("bar@baz.com").
+			Subject("Meeting").
+			Body("Hello, do you want to meet?")
+	})
 }
