@@ -10,7 +10,8 @@ func Sub() {
 	// helloWorldByBuilder()
 	// helloWorldByBuilderWithFluent()
 	// person()
-	sendEmail()
+	// sendEmail()
+	worker()
 }
 
 func helloWorld() {
@@ -70,4 +71,10 @@ func sendEmail() {
 			Subject("Meeting").
 			Body("Hello, do you want to meet?")
 	})
+}
+
+func worker() {
+	wb := WorkerBuilder{}
+	w := wb.Called("Dmitri").WorksAsA("Developer").Build()
+	fmt.Println(*w)
 }
