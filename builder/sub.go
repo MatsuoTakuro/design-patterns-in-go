@@ -6,9 +6,10 @@ import (
 )
 
 func Sub() {
-	helloWorld()
-	helloWorldByBuilder()
-	helloWorldByBuilderWithFluent()
+	// helloWorld()
+	// helloWorldByBuilder()
+	// helloWorldByBuilderWithFluent()
+	person()
 }
 
 func helloWorld() {
@@ -44,4 +45,19 @@ func helloWorldByBuilderWithFluent() {
 	b.AddChildFluent("li", "hello").
 		AddChildFluent("li", "world")
 	fmt.Println(b.String())
+}
+
+func person() {
+	pb := NewPersonBuilder()
+	pb.
+		Lives().
+		At("123 London Road").
+		In("London").
+		WithPostcode("SW12BC").
+		Works().
+		At("Fabrikam").
+		AsA("Programmer").
+		Earning(123000)
+	person := pb.Build()
+	fmt.Println(*person)
 }
