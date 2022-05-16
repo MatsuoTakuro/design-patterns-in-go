@@ -3,7 +3,8 @@ package main
 import (
 	// adapter "github.com/MatsuoTakuro/design-patterns-in-go/adapter"
 	// builder "github.com/MatsuoTakuro/design-patterns-in-go/builder"
-	composite "github.com/MatsuoTakuro/design-patterns-in-go/composite"
+	bridge "github.com/MatsuoTakuro/design-patterns-in-go/bridge"
+	// composite "github.com/MatsuoTakuro/design-patterns-in-go/composite"
 	// facade "github.com/MatsuoTakuro/design-patterns-in-go/facade"
 	// factories "github.com/MatsuoTakuro/design-patterns-in-go/factories"
 	// iterator "github.com/MatsuoTakuro/design-patterns-in-go/iterator"
@@ -26,5 +27,6 @@ func main() {
 	// adapter.Sub()
 	// prototype.Sub()
 	// builder.Sub()
-	composite.Sub()
+	// composite.Sub()
+	bridge.Sub()
 }
