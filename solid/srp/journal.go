@@ -1,4 +1,4 @@
-package singleResponsibility
+package srp
 
 import (
 	"fmt"

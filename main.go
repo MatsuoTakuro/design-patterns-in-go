@@ -10,7 +10,7 @@ import (
 	// iterator "github.com/MatsuoTakuro/design-patterns-in-go/iterator"
 	ocp "github.com/MatsuoTakuro/design-patterns-in-go/solid/ocp"
 	// prototype "github.com/MatsuoTakuro/design-patterns-in-go/prototype"
-	// singleResp "github.com/MatsuoTakuro/design-patterns-in-go/solid/single_responsibility"
+	// singleResp "github.com/MatsuoTakuro/design-patterns-in-go/solid/srp"
 	// singleton "github.com/MatsuoTakuro/design-patterns-in-go/singleton"
 	// strategy "github.com/MatsuoTakuro/design-patterns-in-go/strategy"
 	// templateMethod "github.com/MatsuoTakuro/design-patterns-in-go/template_method"

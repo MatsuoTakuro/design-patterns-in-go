@@ -1,4 +1,4 @@
-package singleResponsibility
+package srp
 
 import "fmt"
 
@@ -9,8 +9,8 @@ func Sub() {
 	fmt.Println(j.String())
 
 	// anti pattern
-	SaveToFile(&j, "solid_design_principles/single_responsibility/journal.txt")
+	SaveToFile(&j, "solid_design_principles/srp/journal.txt")
 
 	p := Persistence{LineSeparator: "\r\n"}
-	p.SaveToFile(&j, "solid_design_principles/single_responsibility/journal2.txt")
+	p.SaveToFile(&j, "solid_design_principles/srp/journal2.txt")
 }
