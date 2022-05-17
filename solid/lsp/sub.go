@@ -10,12 +10,13 @@ func Sub() {
 	UseIt(rc)
 
 	antiSq := NewAntiSquare(5)
+	// AntiSquare violates LSP!
 	UseIt(antiSq)
 
 	sq := Square{
 		size: 5,
 	}
-	// Square follows LSP!
+	// Square follows modified LSP!
 	rc2 := sq.convRectangle()
 	UseIt(rc2)
 }
