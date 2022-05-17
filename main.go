@@ -2,7 +2,7 @@ package main
 
 import (
 	// SOLID Design Principles
-	ocp "github.com/MatsuoTakuro/design-patterns-in-go/solid/ocp"
+	lsp "github.com/MatsuoTakuro/design-patterns-in-go/solid/lsp"
 	// srp "github.com/MatsuoTakuro/design-patterns-in-go/solid/srp"
 	//
 	// GoF Design Patterns
@@ -21,7 +21,8 @@ import (
 
 func main() {
 	// srp.Sub()
-	ocp.Sub()
+	// ocp.Sub()
+	lsp.Sub()
 
 	// iterator.Sub1()
 	// iterator.Sub2()
