@@ -2,7 +2,8 @@ package main
 
 import (
 	// * SOLID Design Principles *
-	isp "github.com/MatsuoTakuro/design-patterns-in-go/solid/isp"
+	dip "github.com/MatsuoTakuro/design-patterns-in-go/solid/dip"
+	// isp "github.com/MatsuoTakuro/design-patterns-in-go/solid/isp"
 	// lsp "github.com/MatsuoTakuro/design-patterns-in-go/solid/lsp"
 	// ocp "github.com/MatsuoTakuro/design-patterns-in-go/solid/ocp"
 	// srp "github.com/MatsuoTakuro/design-patterns-in-go/solid/srp"
@@ -26,7 +27,8 @@ func main() {
 	// srp.Sub()
 	// ocp.Sub()
 	// lsp.Sub()
-	isp.Sub()
+	// isp.Sub()
+	dip.Sub()
 
 	// * GoF Design Patterns *
 	// iterator.Sub1()
