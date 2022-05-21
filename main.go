@@ -2,7 +2,7 @@ package main
 
 import (
 	// * SOLID Design Principles *
-	dip "github.com/MatsuoTakuro/design-patterns-in-go/solid/dip"
+	// dip "github.com/MatsuoTakuro/design-patterns-in-go/solid/dip"
 	// isp "github.com/MatsuoTakuro/design-patterns-in-go/solid/isp"
 	// lsp "github.com/MatsuoTakuro/design-patterns-in-go/solid/lsp"
 	// ocp "github.com/MatsuoTakuro/design-patterns-in-go/solid/ocp"
@@ -13,6 +13,7 @@ import (
 	// builder "github.com/MatsuoTakuro/design-patterns-in-go/builder"
 	// bridge "github.com/MatsuoTakuro/design-patterns-in-go/bridge"
 	// composite "github.com/MatsuoTakuro/design-patterns-in-go/composite"
+	decorator "github.com/MatsuoTakuro/design-patterns-in-go/decorator"
 	// facade "github.com/MatsuoTakuro/design-patterns-in-go/facade"
 	// factories "github.com/MatsuoTakuro/design-patterns-in-go/factories"
 	// iterator "github.com/MatsuoTakuro/design-patterns-in-go/iterator"
@@ -28,7 +29,7 @@ func main() {
 	// ocp.Sub()
 	// lsp.Sub()
 	// isp.Sub()
-	dip.Sub()
+	// dip.Sub()
 
 	// * GoF Design Patterns *
 	// iterator.Sub1()
@@ -43,4 +44,5 @@ func main() {
 	// builder.Sub()
 	// composite.Sub()
 	// bridge.Sub()
+	decorator.Sub()
 }
