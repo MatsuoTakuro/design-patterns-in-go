@@ -1,7 +1,8 @@
 package proxy
 
 func Sub() {
-	protectionProxy()
+	// protectionProxy()
+	virtualProxy()
 }
 
 func protectionProxy() {
@@ -13,4 +14,10 @@ func protectionProxy() {
 		Age: 17,
 	})
 	car2.Drive()
+}
+
+func virtualProxy() {
+	bmp := NewLazyBitmap("demo.png")
+	DrawImage(bmp)
+	DrawImage(bmp)
 }
