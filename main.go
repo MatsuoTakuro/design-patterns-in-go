@@ -17,10 +17,11 @@ import (
 	// facade "github.com/MatsuoTakuro/design-patterns-in-go/facade"
 	// factories "github.com/MatsuoTakuro/design-patterns-in-go/factories"
 	// iterator "github.com/MatsuoTakuro/design-patterns-in-go/iterator"
-	proxy "github.com/MatsuoTakuro/design-patterns-in-go/proxy"
+	// proxy "github.com/MatsuoTakuro/design-patterns-in-go/proxy"
 	// prototype "github.com/MatsuoTakuro/design-patterns-in-go/prototype"
 	// singleton "github.com/MatsuoTakuro/design-patterns-in-go/singleton"
 	// strategy "github.com/MatsuoTakuro/design-patterns-in-go/strategy"
+	state "github.com/MatsuoTakuro/design-patterns-in-go/state"
 	// templateMethod "github.com/MatsuoTakuro/design-patterns-in-go/template_method"
 )
 
@@ -46,5 +47,6 @@ func main() {
 	// composite.Sub()
 	// bridge.Sub()
 	// decorator.Sub()
-	proxy.Sub()
+	// proxy.Sub()
+	state.Sub()
 }
