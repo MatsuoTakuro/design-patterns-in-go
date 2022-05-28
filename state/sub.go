@@ -9,7 +9,8 @@ import (
 
 func Sub() {
 	// classicImpl()
-	handmadeState()
+	// handmadeState()
+	switchBasedState()
 }
 
 func classicImpl() {
@@ -38,4 +39,8 @@ func handmadeState() {
 		state = rlt.hmState
 	}
 	fmt.Println("We are done using the phone")
+}
+
+func switchBasedState() {
+	ValidateEntryCode()
 }
