@@ -47,3 +47,12 @@ func (b *BankAccountCommand) Undo() {
 		b.account.Deposit(b.amount)
 	}
 }
+
+// additional members
+func (b *BankAccountCommand) Succeeded() bool {
+	return b.succeeded
+}
+
+func (b *BankAccountCommand) setSucceeded(succeeded bool) {
+	b.succeeded = succeeded
+}
