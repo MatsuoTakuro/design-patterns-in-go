@@ -3,14 +3,15 @@ package state
 import "fmt"
 
 type OnState struct {
+	// defined below instead of defining 'BaseState BaseState',
+	// any instance of OnState can directly call On(sw *Switch) and Off(sw *Switch).
+	// So, it can be seen as it implements State interface.
 	BaseState
-	// BaseState BaseState
 }
 
-// just implement only Off(sw *Switch) method in State interface
+// Overrides Off(sw *Switch) implemented by (embedded struct of) BaseState
 func (on OnState) Off(sw *Switch) {
 	fmt.Println("Turning light off...")
-	// TODO: why can i assign OnState to State?
 	sw.State = NewOffState()
 }
 
