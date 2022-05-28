@@ -3,7 +3,7 @@ package state
 import "fmt"
 
 type OnState struct {
-	// defined below instead of defining 'BaseState BaseState',
+	// Embedded below instead of defining 'BaseState BaseState',
 	// any instance of OnState can directly call On(sw *Switch) and Off(sw *Switch).
 	// So, it can be seen as it implements State interface.
 	BaseState
