@@ -4,7 +4,8 @@ import "fmt"
 
 func Sub() {
 	// command()
-	compositeCommand()
+	// compositeCommand()
+	functionalCommand()
 }
 
 func command() {
@@ -36,5 +37,17 @@ func compositeCommand() {
 
 	fmt.Println("Undoing...")
 	mtc.Undo()
+	fmt.Println("from=", from, "to=", to)
+}
+
+func functionalCommand() {
+	from := BankAccount{
+		balance: 100,
+	}
+	to := BankAccount{
+		balance: 0,
+	}
+	fm := NewMoneyTransferCommand2(&from, &to)
+	fm.Call(1000)
 	fmt.Println("from=", from, "to=", to)
 }
