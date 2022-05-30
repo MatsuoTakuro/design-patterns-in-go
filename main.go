@@ -12,12 +12,13 @@ import (
 	// adapter "github.com/MatsuoTakuro/design-patterns-in-go/adapter"
 	// builder "github.com/MatsuoTakuro/design-patterns-in-go/builder"
 	// bridge "github.com/MatsuoTakuro/design-patterns-in-go/bridge"
-	command "github.com/MatsuoTakuro/design-patterns-in-go/command"
+	// command "github.com/MatsuoTakuro/design-patterns-in-go/command"
 	// composite "github.com/MatsuoTakuro/design-patterns-in-go/composite"
 	// decorator "github.com/MatsuoTakuro/design-patterns-in-go/decorator"
 	// facade "github.com/MatsuoTakuro/design-patterns-in-go/facade"
 	// factories "github.com/MatsuoTakuro/design-patterns-in-go/factories"
 	// iterator "github.com/MatsuoTakuro/design-patterns-in-go/iterator"
+	mediator "github.com/MatsuoTakuro/design-patterns-in-go/mediator"
 	// proxy "github.com/MatsuoTakuro/design-patterns-in-go/proxy"
 	// prototype "github.com/MatsuoTakuro/design-patterns-in-go/prototype"
 	// singleton "github.com/MatsuoTakuro/design-patterns-in-go/singleton"
@@ -50,5 +51,6 @@ func main() {
 	// decorator.Sub()
 	// proxy.Sub()
 	// state.Sub()
-	command.Sub()
+	// command.Sub()
+	mediator.Sub()
 }
