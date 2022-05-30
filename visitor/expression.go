@@ -1,5 +1,5 @@
 package visitor
 
 type Expression interface {
-	Accept(ev ExpressionVisitor)
+	Accept(ev ExpressionVisitor) // accept a visitor
 }

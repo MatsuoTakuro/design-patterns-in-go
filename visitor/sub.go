@@ -53,15 +53,15 @@ func classic() {
 		right: a,
 	}
 
-	ep := NewExpressionPrinter()
-	ep.VisitDoubleExpression(d1)
+	ep := NewExpressionPrinter() // visitor
+	ep.VisitDoubleExpression(d1) // ep is already accepted by d1
 	fmt.Println(ep)
 
-	ep1 := NewExpressionPrinter()
-	ep1.VisitAdditionExpression(a)
+	ep1 := NewExpressionPrinter()  // visitor
+	ep1.VisitAdditionExpression(a) // ep1 is already accepted by a
 	fmt.Println(ep1)
 
-	ep2 := NewExpressionPrinter()
-	ep2.VisitAdditionExpression(e)
+	ep2 := NewExpressionPrinter()  // visitor
+	ep2.VisitAdditionExpression(e) // ep2 is already accepted by e
 	fmt.Println(ep2)
 }

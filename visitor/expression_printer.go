@@ -10,14 +10,16 @@ type ExpressionVisitor interface {
 	VisitAdditionExpression(ae *AdditionExpression)
 }
 
-type ExpressionPrinter struct {
+type ExpressionPrinter struct { // visitor
 	sb strings.Builder
 }
 
+// visitor executes this if accepted.
 func (e *ExpressionPrinter) VisitDoubleExpression(de *DoubleExpression) {
 	e.sb.WriteString(fmt.Sprintf("%g", de.value))
 }
 
+// visitor executes this if accepted.
 func (e *ExpressionPrinter) VisitAdditionExpression(ae *AdditionExpression) {
 	e.sb.WriteString("(")
 	ae.left.Accept(e)
