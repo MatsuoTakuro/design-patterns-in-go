@@ -4,7 +4,8 @@ import "fmt"
 
 func Sub() {
 	// doctorService()
-	trafficManagement()
+	// trafficManagement()
+	canVote()
 }
 
 func doctorService() {
@@ -17,7 +18,7 @@ func doctorService() {
 }
 
 func trafficManagement() {
-	d := NewDriver(15)
+	d := NewPerson(15)
 	t := &TrafficManagement{
 		Observable: d.Observable,
 	}
@@ -29,4 +30,17 @@ func trafficManagement() {
 	}
 
 	fmt.Println(d.Age())
+}
+
+func canVote() {
+	p := NewPerson(0)
+	er := &ElectrocalRoll{
+		Observable: p.Observable,
+	}
+	p.Subscribe(er)
+
+	for i := 10; i < 20; i++ {
+		fmt.Println("Setting age to", i)
+		p.SetAge(i)
+	}
 }
