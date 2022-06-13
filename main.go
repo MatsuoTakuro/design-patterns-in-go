@@ -19,13 +19,14 @@ import (
 	// factories "github.com/MatsuoTakuro/design-patterns-in-go/factories"
 	// iterator "github.com/MatsuoTakuro/design-patterns-in-go/iterator"
 	// mediator "github.com/MatsuoTakuro/design-patterns-in-go/mediator"
+	observer "github.com/MatsuoTakuro/design-patterns-in-go/observer"
 	// proxy "github.com/MatsuoTakuro/design-patterns-in-go/proxy"
 	// prototype "github.com/MatsuoTakuro/design-patterns-in-go/prototype"
 	// singleton "github.com/MatsuoTakuro/design-patterns-in-go/singleton"
 	// strategy "github.com/MatsuoTakuro/design-patterns-in-go/strategy"
 	// state "github.com/MatsuoTakuro/design-patterns-in-go/state"
 	// templateMethod "github.com/MatsuoTakuro/design-patterns-in-go/template_method"
-	visitor "github.com/MatsuoTakuro/design-patterns-in-go/visitor"
+	// visitor "github.com/MatsuoTakuro/design-patterns-in-go/visitor"
 )
 
 func main() {
@@ -54,5 +55,6 @@ func main() {
 	// state.Sub()
 	// command.Sub()
 	// mediator.Sub()
-	visitor.Sub()
+	// visitor.Sub()
+	observer.Sub()
 }
